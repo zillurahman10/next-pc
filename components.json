@@ -1,0 +1,190 @@
+{
+  "cpu": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/intel-core-i3-13100f-processor-01-250x250.jpg",
+      "name": "Intel 13th Gen Core i3-13100F Raptor Lake Processor",
+      "category": "Lake CPU / Processor",
+      "price": "14,000৳",
+      "status": "In stock",
+      "rating": "4/5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/intel-core-i3-13100f-processor-01-250x250.jpg",
+      "name": "Intel 13th Gen Core i3-13100F Raptor Lake Processor",
+      "category": "Lake CPU / Processor",
+      "price": "14,000৳",
+      "status": "In stock",
+      "rating": "4/5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/intel-core-i3-13100f-processor-01-250x250.jpg",
+      "name": "Intel 13th Gen Core i3-13100F Raptor Lake Processor",
+      "category": "Lake CPU / Processor",
+      "price": "14,000৳",
+      "status": "In stock",
+      "rating": "4/5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/intel-core-i3-13100f-processor-01-250x250.jpg",
+      "name": "Intel 13th Gen Core i3-13100F Raptor Lake Processor",
+      "category": "Lake CPU / Processor",
+      "price": "14,000৳",
+      "status": "In stock",
+      "rating": "4/5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/intel-core-i3-13100f-processor-01-250x250.jpg",
+      "name": "Intel 13th Gen Core i3-13100F Raptor Lake Processor",
+      "category": "Lake CPU / Processor",
+      "price": "14,000৳",
+      "status": "In Stock",
+      "rating": "4 out of 5"
+    }
+  ],
+  "motherboard": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/13-119-199-V01-250x250.jpg",
+      "name": "ASUS PRIME X570-P AMD AM4 SOCKET MOTHERBOARD",
+      "category": "ATX Motherboard",
+      "price": "15,700৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/13-119-199-V01-250x250.jpg",
+      "name": "ASUS PRIME X570-P AMD AM4 SOCKET MOTHERBOARD",
+      "category": "ATX Motherboard",
+      "price": "15,700৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/13-119-199-V01-250x250.jpg",
+      "name": "ASUS PRIME X570-P AMD AM4 SOCKET MOTHERBOARD",
+      "category": "ATX Motherboard",
+      "price": "15,700৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/13-119-199-V01-250x250.jpg",
+      "name": "ASUS PRIME X570-P AMD AM4 SOCKET MOTHERBOARD",
+      "category": "ATX Motherboard",
+      "price": "15,700৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/13-119-199-V01-250x250.jpg",
+      "name": "ASUS PRIME X570-P AMD AM4 SOCKET MOTHERBOARD",
+      "category": "ATX Motherboard",
+      "price": "15,700৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    }
+  ],
+  "ram": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/fury-beast-rgb-02-500x500-1-250x250.jpg",
+      "name": "Kingston FURY Beast RGB 8GB 3200MHz DDR4 Desktop RAM",
+      "category": "Desktop Ram",
+      "price": " 3,299৳",
+      "status": "In Stock",
+      "rating": "5 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/fury-beast-rgb-02-500x500-1-250x250.jpg",
+      "name": "Kingston FURY Beast RGB 8GB 3200MHz DDR4 Desktop RAM",
+      "category": "Desktop Ram",
+      "price": " 3,299৳",
+      "status": "In Stock",
+      "rating": "5 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/fury-beast-rgb-02-500x500-1-250x250.jpg",
+      "name": "Kingston FURY Beast RGB 8GB 3200MHz DDR4 Desktop RAM",
+      "category": "Desktop Ram",
+      "price": " 3,299৳",
+      "status": "In Stock",
+      "rating": "5 out of 5"
+    }
+  ],
+  "powerSupplyUnit": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/neo-eco-platinum-750w-03-500x500-1-250x250.jpg",
+      "name": "Antec NEO ECO 750 Platinum Full Modular Black Power Supply",
+      "category": "Platiam Power Suply",
+      "price": " 9,600৳",
+      "status": "Out Of Stock",
+      "rating": "4.5 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/neo-eco-platinum-750w-03-500x500-1-250x250.jpg",
+      "name": "Antec NEO ECO 750 Platinum Full Modular Black Power Supply",
+      "category": "Platiam Power Suply",
+      "price": " 9,600৳",
+      "status": "Out Of Stock",
+      "rating": "4.5 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/neo-eco-platinum-750w-03-500x500-1-250x250.jpg",
+      "name": "Antec NEO ECO 750 Platinum Full Modular Black Power Supply",
+      "category": "Platiam Power Suply",
+      "price": " 9,600৳",
+      "status": "Out Of Stock",
+      "rating": "4.5 out of 5"
+    }
+  ],
+  "storageDevice": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/KINGSMAN-SK350-250x250.jpg",
+      "name": "AITC KINGSMAN SK350 256GB SATA SSD",
+      "category": "SATA SSD",
+      "price": " 1,725৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/KINGSMAN-SK350-250x250.jpg",
+      "name": "AITC KINGSMAN SK350 256GB SATA SSD",
+      "category": "SATA SSD",
+      "price": " 1,725৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/KINGSMAN-SK350-250x250.jpg",
+      "name": "AITC KINGSMAN SK350 256GB SATA SSD",
+      "category": "SATA SSD",
+      "price": " 1,725৳",
+      "status": "In Stock",
+      "rating": "3 out of 5"
+    }
+  ],
+  "monitor": [
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/Esonic-19-Inch-250x250.jpg",
+      "name": "Esonic 19 inch HD LED Monitor",
+      "category": "IPS Monitor",
+      "price": "4,500৳",
+      "status": "In Stock",
+      "rating": "4 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/Esonic-19-Inch-250x250.jpg",
+      "name": "Esonic 19 inch HD LED Monitor",
+      "category": "IPS Monitor",
+      "price": "4,500৳",
+      "status": "In Stock",
+      "rating": "4 out of 5"
+    },
+    {
+      "img": "https://www.skyland.com.bd/wp-content/uploads/Esonic-19-Inch-250x250.jpg",
+      "name": "Esonic 19 inch HD LED Monitor",
+      "category": "IPS Monitor",
+      "price": "4,500৳",
+      "status": "In Stock",
+      "rating": "4 out of 5"
+    }
+  ]
+}

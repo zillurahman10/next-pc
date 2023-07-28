@@ -4,47 +4,51 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 const { Header, Content, Footer } = Layout;
 import { Dropdown, Space } from 'antd';
 import { } from 'react-icons/fa';
+import { useSession } from 'next-auth/react';
 
 const RootLayout = ({ children }) => {
+    // const { data: session } = useSession()
+    // console.log(session);
     const {
         token: { colorBgContainer },
     } = theme.useToken();
+
 
     const items = [
         {
             key: '1',
             label: (
-                <Link href={'/'}>CPU / Processor</Link>
+                <Link href={'/cpu'}>CPU / Processor</Link>
             ),
         },
         {
             key: '2',
             label: (
-                <Link href={'/'}>Motherboard</Link>
+                <Link href={'/motherboard'}>Motherboard</Link>
             ),
         },
         {
             key: '3',
             label: (
-                <Link href={'/'}>RAM</Link>
+                <Link href={'/ram'}>RAM</Link>
             ),
         },
         {
             key: '4',
             label: (
-                <Link href={'/'}>Power Supply Unit</Link>
+                <Link href={'/powerSupply'}>Power Supply Unit</Link>
             ),
         },
         {
             key: '5',
             label: (
-                <Link href={'/'}>Storage Device</Link>
+                <Link href={'/storage'}>Storage Device</Link>
             ),
         },
         {
             key: '6',
             label: (
-                <Link href={'/'}>Monitort</Link>
+                <Link href={'/monitor'}>Monitor</Link>
             ),
         },
         {

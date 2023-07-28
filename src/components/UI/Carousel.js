@@ -1,25 +1,26 @@
 import React from 'react';
 import { Carousel } from 'antd';
+import Image from 'next/image';
+import banner1 from '../../assets/Banner-1.png'
 const contentStyle = {
     height: '500px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
-    background: '#364d79',
 };
 const Banner = () => (
     <Carousel autoplay className='mt-[40px] w-full'>
         <div>
-            <h3 style={contentStyle}>1</h3>
+            <Image src={banner1} alt='' />
         </div>
         <div>
-            <h3 style={contentStyle}>2</h3>
+            <Image src={banner1} alt='' />
         </div>
         <div>
-            <h3 style={contentStyle}>3</h3>
+            <Image src={banner1} alt='' />
         </div>
         <div>
-            <h3 style={contentStyle}>4</h3>
+            <Image src={banner1} alt='' />
         </div>
     </Carousel>
 );
