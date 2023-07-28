@@ -19,11 +19,11 @@ productDetails.getLayout = function getLayout(page) {
     )
 }
 
-export const getStaticProps = async () => {
-    const res = await 
-    return {
-        props: {
+// export const getStaticProps = async () => {
+//     const res = await
+//     return {
+//         props: {
 
-        }
-    }
-}
+//         }
+//     }
+// }
