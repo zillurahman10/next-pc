@@ -8,7 +8,17 @@ const PCBuilderPage = () => {
     const { products } = useSelector(state => state.pcBuilder)
     console.log(products);
 
-    const cpuProduct = products.filter(product => product.category === 'Lake CPU / Processor')[0];
+    const cpuProduct = products.filter(product => product.category === 'CPU')[0];
+
+    const motherboardProduct = products.filter(product => product.category === 'Motherboard')[0]
+
+    const ramProduct = products.filter(product => product.category === 'Ram')[0]
+
+    const powerSupplyProduct = products.filter(product => product.category === 'Power Supply')[0]
+
+    const storageProduct = products.filter(product => product.category === 'Storage')[0]
+
+    const monitorProduct = products.filter(product => product.category === 'Monitor')[0]
 
     return (
         <>
@@ -31,6 +41,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>Motherboard</h3>
+                        <div className='flex justify-center items-center'>
+                            <img src={motherboardProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{motherboardProduct?.name}</h4>
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/motherboard'}>
@@ -41,6 +55,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>Ram</h3>
+                        <div className='flex justify-center items-center'>
+                            <img src={ramProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{ramProduct?.name}</h4>
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/ram'}>
@@ -51,6 +69,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>Power Supply Unit</h3>
+                        <div className='flex justify-center items-center'>
+                            <img src={powerSupplyProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{powerSupplyProduct?.name}</h4>
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/power-supply'}>
@@ -61,6 +83,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>Storage Device</h3>
+                        <div className='flex justify-center items-center'>
+                            <img src={storageProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{storageProduct?.name}</h4>
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/storage-device'}>
@@ -71,6 +97,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>Monitor</h3>
+                        <div className='flex justify-center items-center'>
+                            <img src={monitorProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{monitorProduct?.name}</h4>
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/monitor'}>
@@ -78,9 +108,9 @@ const PCBuilderPage = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='flex justify-center pb-12'>
+                <div className='flex justify-center pb-12 mt-5'>
                     {
-                        products.length === 6 ?
+                        products.length > 6 ?
                             <Button onClick={() => alert('build completed')}>Complete Build</Button>
                             :
                             <Button type='primary' disabled>Complete Build</Button>

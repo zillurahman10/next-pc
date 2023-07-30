@@ -59,7 +59,9 @@ const RootLayout = ({ children }) => {
         },
     ];
     return (
-        <Layout className="layout">
+        <Layout className="layout" style={{
+            height: '2000px'
+        }}>
             <Header style={{ display: 'flex', alignItems: 'center' }}>
                 <div className="demo-logo" />
                 <Menu
@@ -96,7 +98,7 @@ const RootLayout = ({ children }) => {
             <Content style={{ padding: '0 50px' }}>
                 <div className="site-layout-content" style={{
                     background: colorBgContainer,
-                    height: '100vh'
+                    height: '1900px'
                 }}>
                     {children}
                 </div>
