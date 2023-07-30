@@ -2,11 +2,14 @@ import { addToPcBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import { Button, Card } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 
 const AddProductCard = ({ product }) => {
     const dispatch = useDispatch()
+    const router = useRouter();
     const handleAddProduct = () => {
         dispatch(addToPcBuilder(product))
+        router.push('/pcBuilder');
     }
     return (
         <div>
