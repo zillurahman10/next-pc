@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const storage = ({ components }) => {
-    const storage = components.data[0].storageDevice
+    const storage = components?.data
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top storage</h1>
@@ -27,7 +27,7 @@ storage.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3004/components")
+    const res = await fetch("http://localhost:5000/storage")
     const data = await res.json()
     return {
         props: {

@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const motherboard = ({ components }) => {
-    const motherboard = components.data[0].motherboard
+    const motherboard = components?.data
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top motherboard</h1>
@@ -27,7 +27,7 @@ motherboard.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3004/components")
+    const res = await fetch("http://localhost:5000/motherboard")
     const data = await res.json()
     return {
         props: {

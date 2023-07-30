@@ -87,7 +87,9 @@ const RootLayout = ({ children }) => {
                         </Link>
                     </div>
                     <div>
-                        <Button type="primary" className='mt-4 ml-2'>PC Builder</Button>
+                        <Link href={'/pcBuilder'}>
+                            <Button type="primary" className='mt-4 ml-2'>PC Builder</Button>
+                        </Link>
                     </div>
                 </Menu>
             </Header>

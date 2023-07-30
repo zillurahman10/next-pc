@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const powerSupply = ({ components }) => {
-    const powerSupply = components.data[0].powerSupplyUnit
+    const powerSupply = components?.data
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top powerSupply</h1>
@@ -27,7 +27,7 @@ powerSupply.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3004/components")
+    const res = await fetch("http://localhost:5000/power-supply")
     const data = await res.json()
     return {
         props: {

@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const cpu = ({ components }) => {
-    const cpu = components.data[0].cpu
+    const cpu = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top CPU</h1>
@@ -27,7 +27,7 @@ cpu.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3004/components")
+    const res = await fetch("http://localhost:5000/cpu")
     const data = await res.json()
     return {
         props: {
