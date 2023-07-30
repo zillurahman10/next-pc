@@ -60,7 +60,7 @@ const RootLayout = ({ children }) => {
     ];
     return (
         <Layout className="layout" style={{
-            height: '2000px'
+            height: '100%'
         }}>
             <Header style={{ display: 'flex', alignItems: 'center' }}>
                 <div className="demo-logo" />
@@ -70,7 +70,9 @@ const RootLayout = ({ children }) => {
                     className='flex justify-between'
                 >
                     <div className='mx-5'>
-                        <Link href="/">Home</Link>
+                        <Link className='flex justify-center items-center' href="/">
+                            <p>NEXT-PC</p>
+                        </Link>
                     </div>
                     <div>
                         <Dropdown
@@ -101,12 +103,12 @@ const RootLayout = ({ children }) => {
             <Content style={{ padding: '0 50px' }}>
                 <div className="site-layout-content" style={{
                     background: colorBgContainer,
-                    height: '1900px'
+                    height: '100%'
                 }}>
                     {children}
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center' }}>NEXT-PC ©2023 Created by ZILLUR RAHMAN</Footer>
         </Layout>
     );
 };

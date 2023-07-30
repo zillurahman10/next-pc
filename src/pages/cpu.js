@@ -7,7 +7,7 @@ const cpu = ({ components }) => {
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top CPU</h1>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center items-center'>
                 {
                     cpu.map(product => <ComponentCard key={product?.id} product={product}></ComponentCard>)
                 }

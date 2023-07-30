@@ -4,16 +4,7 @@ import ComponentCard from "@/components/UI/ComponentCard";
 import FeaturedCard from "@/components/UI/FeaturedCard";
 
 function Home({ components, featured }) {
-  let random = []
-  const cpu = components.data[0].cpu
-  const motherboard = components.data[0].motherboard
-  const monitor = components.data[0].monitor
-  const powerSupplyUnit = components.data[0].powerSupplyUnit
-  const ram = components.data[0].ram
-  const storageDevice = components.data[0].storageDevice
-
-  random.push(...cpu, ...motherboard, ...monitor, ...powerSupplyUnit, ...storageDevice, ...ram)
-
+  console.log(components);
   return (
     <div>
       {/* Banner section */}
@@ -27,7 +18,7 @@ function Home({ components, featured }) {
         <div className="flex justify-center items-center">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {
-              random.map(product => <ComponentCard key={product?.index} product={product}></ComponentCard>)
+              components.data.slice(0, 6).map(product => <ComponentCard key={product?._id} product={product}></ComponentCard>)
             }
           </div>
         </div>
@@ -68,41 +59,3 @@ export const getStaticProps = async () => {
     }
   }
 }
-
-const featured = [
-  {
-    img: 'https://i.ibb.co/ScsjPsj/cpu-65x65.png',
-    name: 'CPU / Processor',
-    link: '/cpu'
-  },
-  {
-    img: 'https://i.ibb.co/xDhZwKN/mobo-65x65.png',
-    name: 'Motherboard',
-    link: '/motherboard'
-  },
-  {
-    img: 'https://i.ibb.co/4T1vRKj/ram-65x65.png',
-    name: 'Ram',
-    link: '/ram'
-  },
-  {
-    img: 'https://i.ibb.co/hC6Q4hh/monitor-65x65.png',
-    name: 'Monitor',
-    link: '/monitor'
-  },
-  {
-    img: 'https://i.ibb.co/4Ygtw1h/psu-65x65.png',
-    name: 'Power Supply',
-    link: '/power-supply'
-  },
-  {
-    img: 'https://i.ibb.co/fMWkypC/ssd-65x65.png',
-    name: 'Storage Device',
-    link: '/storage'
-  },
-  {
-    img: 'https://i.ibb.co/ScsjPsj/cpu-65x65.png',
-    name: 'Others',
-    link: '/others'
-  },
-]
