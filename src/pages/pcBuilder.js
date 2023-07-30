@@ -9,7 +9,6 @@ const PCBuilderPage = () => {
     console.log(products);
 
     const cpuProduct = products.filter(product => product.category === 'Lake CPU / Processor')[0];
-    console.log(cpuProduct);
 
     return (
         <>
@@ -18,8 +17,9 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>CPU / Processor</h3>
-                        <div>
-
+                        <div className='flex justify-center items-center'>
+                            <img src={cpuProduct?.img} alt='' className='w-[100px]'></img>
+                            <h4>{cpuProduct?.name}</h4>
                         </div>
                     </div>
                     <div>
