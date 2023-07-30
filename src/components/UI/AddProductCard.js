@@ -1,7 +1,13 @@
+import { addToPcBuilder } from '@/redux/features/pcBuilder/pcBuilderSlice';
 import { Button, Card } from 'antd';
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 const AddProductCard = ({ product }) => {
+    const dispatch = useDispatch()
+    const handleAddProduct = () => {
+        dispatch(addToPcBuilder(product))
+    }
     return (
         <div>
             <Card
@@ -18,7 +24,7 @@ const AddProductCard = ({ product }) => {
                     <p>Price: {product?.price}</p>
                     <p>Status: {product?.status}</p>
                     <p>Rating: {product?.rating}</p>
-                    <Button className='w-full mt-3'>ADD</Button>
+                    <Button onClick={() => handleAddProduct()} className='w-full mt-3'>ADD</Button>
                 </div>
             </Card>
         </div>

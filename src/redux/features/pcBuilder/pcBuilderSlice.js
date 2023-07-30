@@ -5,7 +5,7 @@ const initialState = {
 }
 
 const pcBuilderSlice = createSlice({
-    name: 'pc-builder',
+    name: 'pcBuilder',
     initialState,
     reducers: {
         addToPcBuilder: (state, action) => {

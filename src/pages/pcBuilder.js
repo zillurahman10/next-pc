@@ -1,8 +1,13 @@
 import RootLayout from '@/components/Layout/RootLayout';
 import { Button } from 'antd';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 const PCBuilderPage = () => {
+
+    const { products } = useSelector(state => state.pcBuilder)
+    console.log(products);
+
     return (
         <>
             <h1 className='text-center pt-12 text-2xl font-sans'>Make you dream PC</h1>
@@ -10,6 +15,13 @@ const PCBuilderPage = () => {
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
                         <h3 className='text-2xl'>CPU / Processor</h3>
+                        <div>
+                            {
+                                products.slice(0, 1).map(product => <>
+
+                                </>)
+                            }
+                        </div>
                     </div>
                     <div>
                         <Link href={'/addProduct/cpu'}>
@@ -66,6 +78,15 @@ const PCBuilderPage = () => {
                             <Button className='w-[150px] h-[50px]'>Choose</Button>
                         </Link>
                     </div>
+                </div>
+                <div className='flex justify-center pb-12'>
+                    {
+                        products.length === 6 ?
+                            <Button>Complete Build</Button>
+                            :
+                            <Button type='primary' disabled>Complete Build</Button>
+
+                    }
                 </div>
             </div>
         </>
