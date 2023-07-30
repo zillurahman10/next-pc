@@ -1,5 +1,5 @@
 import RootLayout from '@/components/Layout/RootLayout';
-import { Button } from 'antd';
+import { Button, Tooltip } from 'antd';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
@@ -14,7 +14,7 @@ const PCBuilderPage = () => {
 
     const ramProduct = products.filter(product => product.category === 'Ram')[0]
 
-    const powerSupplyProduct = products.filter(product => product.category === 'Power Supply')[0]
+    const powerSupplyProduct = products.filter(product => product.category === 'Power-Supply')[0]
 
     const storageProduct = products.filter(product => product.category === 'Storage')[0]
 
@@ -110,10 +110,13 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-center pb-12 mt-5'>
                     {
-                        products.length > 6 ?
+                        products.length >= 5 ?
                             <Button onClick={() => alert('build completed')}>Complete Build</Button>
                             :
-                            <Button type='primary' disabled>Complete Build</Button>
+                            <Tooltip title="Select at least 5 product to complete the build">
+                                <Button type='primary' disabled>Complete Build</Button>
+                            </Tooltip>
+
 
                     }
                 </div>

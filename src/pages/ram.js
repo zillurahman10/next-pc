@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const ram = ({ components }) => {
-    const ram = components?.data
+    const ram = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top motherboard</h1>

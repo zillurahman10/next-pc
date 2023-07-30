@@ -1,18 +1,18 @@
 import RootLayout from '@/components/Layout/RootLayout';
 import React from 'react';
 
-const ramDetails = ({ ram }) => {
+const motherboardDetails = ({ motherboard }) => {
     return (
         <div>
-            <h1>name: {ram?.name}</h1>
-            <p>id: {ram?._id}</p>
+            <h1>name: {motherboard?.name}</h1>
+            <p>id: {motherboard?._id}</p>
         </div>
     );
 };
 
-export default ramDetails;
+export default motherboardDetails;
 
-ramDetails.getLayout = function getLayout(page) {
+motherboardDetails.getLayout = function getLayout(page) {
     return (
         <RootLayout>
             {page}
@@ -21,11 +21,11 @@ ramDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/ram')
+    const res = await fetch('http://localhost:5000/motherboard')
     const data = await res.json()
 
     const paths = data.map((product) => ({
-        params: { ramId: product._id }
+        params: { motherboardId: product?._id }
     }))
 
     return { paths, fallback: false }
@@ -33,11 +33,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/ram/${params.ramId}`)
+    const res = await fetch(`http://localhost:5000/motherboard/${params.motherboardId}`)
     const data = await res.json()
     return {
         props: {
-            ram: data
+            motherboard: data
         }
     }
 }

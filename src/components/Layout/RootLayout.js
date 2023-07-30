@@ -69,6 +69,9 @@ const RootLayout = ({ children }) => {
                     mode="horizontal"
                     className='flex justify-between'
                 >
+                    <div className='mx-5'>
+                        <Link href="/">Home</Link>
+                    </div>
                     <div>
                         <Dropdown
                             menu={{

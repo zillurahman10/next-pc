@@ -1,18 +1,18 @@
 import RootLayout from '@/components/Layout/RootLayout';
 import React from 'react';
 
-const ramDetails = ({ ram }) => {
+const monitorDetails = ({ monitor }) => {
     return (
         <div>
-            <h1>name: {ram?.name}</h1>
-            <p>id: {ram?._id}</p>
+            <h1>name: {monitor?.name}</h1>
+            <p>id: {monitor?._id}</p>
         </div>
     );
 };
 
-export default ramDetails;
+export default monitorDetails;
 
-ramDetails.getLayout = function getLayout(page) {
+monitorDetails.getLayout = function getLayout(page) {
     return (
         <RootLayout>
             {page}
@@ -21,11 +21,12 @@ ramDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/ram')
+    const res = await fetch('http://localhost:5000/cpu')
     const data = await res.json()
+    console.log(data);
 
     const paths = data.map((product) => ({
-        params: { ramId: product._id }
+        params: { monitorId: product._id }
     }))
 
     return { paths, fallback: false }
@@ -33,11 +34,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/ram/${params.ramId}`)
+    const res = await fetch(`http://localhost:5000/monitor/${params.monitorId}`)
     const data = await res.json()
     return {
         props: {
-            ram: data
+            monitor: data
         }
     }
 }

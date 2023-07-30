@@ -3,7 +3,7 @@ import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const powerSupply = ({ components }) => {
-    const powerSupply = components?.data
+    const powerSupply = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top powerSupply</h1>

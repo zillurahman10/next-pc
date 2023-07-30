@@ -3,7 +3,7 @@ import AddProductCard from '@/components/UI/AddProductCard';
 import React from 'react';
 
 const motherboard = ({ components }) => {
-    const motherboard = components?.data
+    const motherboard = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top motherboard</h1>

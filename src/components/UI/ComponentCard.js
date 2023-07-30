@@ -3,7 +3,7 @@ import { Card } from 'antd';
 import Link from 'next/link';
 const { Meta } = Card;
 const ComponentCard = ({ product }) => (
-    <Link href={`/product/${product?._id}`}>
+    <Link href={`/${product?.category}/${product?._id}`}>
         <Card
             hoverable
             className='border'

@@ -3,7 +3,7 @@ import AddProductCard from '@/components/UI/AddProductCard';
 import React from 'react';
 
 const monitor = ({ components }) => {
-    const monitor = components?.data
+    const monitor = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top monitor</h1>

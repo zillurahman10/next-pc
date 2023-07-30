@@ -3,7 +3,7 @@ import AddProductCard from '@/components/UI/AddProductCard';
 import React from 'react';
 
 const storage = ({ components }) => {
-    const storage = components?.data
+    const storage = components
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top storage</h1>
