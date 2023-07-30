@@ -1,6 +1,5 @@
 import RootLayout from '@/components/Layout/RootLayout';
 import AddProductCard from '@/components/UI/AddProductCard';
-import ComponentCard from '@/components/UI/ComponentCard';
 import React from 'react';
 
 const ram = ({ components }) => {
