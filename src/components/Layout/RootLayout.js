@@ -4,11 +4,11 @@ import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 const { Header, Content, Footer } = Layout;
 import { Dropdown, Space } from 'antd';
 import { } from 'react-icons/fa';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut, SessionProvider } from 'next-auth/react';
 
 const RootLayout = ({ children }) => {
-    // const { data: session } = useSession()
-    // console.log(session);
+    const { data: session } = useSession()
+
     const {
         token: { colorBgContainer },
     } = theme.useToken();
@@ -89,9 +89,13 @@ const RootLayout = ({ children }) => {
                         </Dropdown>
                     </div>
                     <div>
-                        <Link href={'/login'}>
-                            <Button className='mt-4 ml-2' type='primary'>Login</Button>
-                        </Link>
+                        {
+                            session && session.user ? <p className='pl-5 text-blue-500'>{session.user.name}</p>
+                                :
+                                <Link href={'/login'}>
+                                    <Button className='mt-4 ml-2' type='primary'>Login</Button>
+                                </Link>
+                        }
                     </div>
                     <div>
                         <Link href={'/pcBuilder'}>

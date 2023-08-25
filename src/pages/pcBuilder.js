@@ -25,8 +25,8 @@ const PCBuilderPage = () => {
             <h1 className='text-center pt-12 text-2xl font-sans'>Make you dream PC</h1>
             <div className='mt-8'>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
-                    <div>
-                        <h3 className='text-2xl'>CPU / Processor</h3>
+                    <div className=''>
+                        <h3 className='text-2xl mb-5'>CPU / Processor</h3>
                         <div className='flex justify-center items-center'>
                             <img src={cpuProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{cpuProduct?.name}</h4>
@@ -40,7 +40,7 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
-                        <h3 className='text-2xl'>Motherboard</h3>
+                        <h3 className='text-2xl mb-5'>Motherboard</h3>
                         <div className='flex justify-center items-center'>
                             <img src={motherboardProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{motherboardProduct?.name}</h4>
@@ -54,7 +54,7 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
-                        <h3 className='text-2xl'>Ram</h3>
+                        <h3 className='text-2xl mb-5'>Ram</h3>
                         <div className='flex justify-center items-center'>
                             <img src={ramProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{ramProduct?.name}</h4>
@@ -68,7 +68,7 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
-                        <h3 className='text-2xl'>Power Supply Unit</h3>
+                        <h3 className='text-2xl mb-5'>Power Supply Unit</h3>
                         <div className='flex justify-center items-center'>
                             <img src={powerSupplyProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{powerSupplyProduct?.name}</h4>
@@ -82,7 +82,7 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
-                        <h3 className='text-2xl'>Storage Device</h3>
+                        <h3 className='text-2xl mb-5'>Storage Device</h3>
                         <div className='flex justify-center items-center'>
                             <img src={storageProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{storageProduct?.name}</h4>
@@ -96,7 +96,7 @@ const PCBuilderPage = () => {
                 </div>
                 <div className='flex justify-between mx-24 mt-2 border rounded-md p-4'>
                     <div>
-                        <h3 className='text-2xl'>Monitor</h3>
+                        <h3 className='text-2xl mb-5'>Monitor</h3>
                         <div className='flex justify-center items-center'>
                             <img src={monitorProduct?.img} alt='' className='w-[100px]'></img>
                             <h4>{monitorProduct?.name}</h4>

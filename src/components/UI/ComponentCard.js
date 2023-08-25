@@ -11,7 +11,7 @@ const ComponentCard = ({ product }) => (
                 maxWidth: '300px',
             }}
         >
-            <img alt="example" src={product?.img} className="w-full h-48 object-cover" />
+            <img alt="example" src={product?.img} className="w-[80% ] object-cover" />
             <div className="p-4">
                 <h1 className='font-bold text-xl mb-2'>{product?.name}</h1>
                 <p>Category: {product?.category}</p>
