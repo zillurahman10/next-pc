@@ -17,7 +17,7 @@ const ComponentCard = ({ product }) => (
                 <p>Category: {product?.category}</p>
                 <p>Price: {product?.price}</p>
                 <p>Status: {product?.status}</p>
-                <p>Rating: {product?.rating}</p>
+                <p>Rating: {product?.AvarageRating}</p>
             </div>
         </Card>
     </Link>

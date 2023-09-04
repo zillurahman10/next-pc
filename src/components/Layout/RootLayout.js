@@ -54,7 +54,7 @@ const RootLayout = ({ children }) => {
         {
             key: '7',
             label: (
-                <Link href={'/'}>Others...</Link>
+                <Link href={'/others'}>Others...</Link>
             ),
         },
     ];

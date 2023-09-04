@@ -2,8 +2,7 @@ import RootLayout from '@/components/Layout/RootLayout';
 import { Divider } from 'antd';
 import React from 'react';
 
-const motherboardDetails = ({ motherboard }) => {
-    console.log(motherboard);
+const othersDetails = ({ others }) => {
     return (
         <div>
             <div>
@@ -13,16 +12,16 @@ const motherboardDetails = ({ motherboard }) => {
                             width: '60%',
                             padding: '50px',
                             margin: '0px'
-                        }} src={motherboard?.img} alt=''></img>
+                        }} src={others?.img} alt=''></img>
                     </div>
                     <div className='flex items-center'>
                         <div>
                             <div>
-                                <h1 className='text-left text-2xl text-blue-600 pt-[20px] pl-[-100px]'>{motherboard?.name}</h1>
+                                <h1 className='text-left text-2xl text-blue-600 pt-[20px] pl-[-100px]'>{others?.name}</h1>
                                 <div className='flex items-center'>
-                                    <p className='font-bold mt-5 mr-2'>Price: <span className='bg-red-100 py-1 px-1 rounded'>{motherboard?.price}</span></p>
-                                    <p className='font-bold mt-5 mr-2'>Rating: <span className='bg-red-100 py-1 px-1 rounded'>{motherboard?.AvarageRating}</span></p>
-                                    <p className='font-bold mt-5'>Status: <span className='bg-red-100 py-1 px-1 rounded'>{motherboard?.status}</span></p>
+                                    <p className='font-bold mt-5 mr-2'>Price: <span className='bg-red-100 py-1 px-1 rounded'>{others?.price}</span></p>
+                                    <p className='font-bold mt-5 mr-2'>Rating: <span className='bg-red-100 py-1 px-1 rounded'>{others?.AvarageRating}</span></p>
+                                    <p className='font-bold mt-5'>Status: <span className='bg-red-100 py-1 px-1 rounded'>{others?.status}</span></p>
                                 </div>
 
 
@@ -30,11 +29,11 @@ const motherboardDetails = ({ motherboard }) => {
                             <div className='mt-8'>
                                 <h3 className='text-xl'>Key Features</h3>
                                 {
-                                    motherboard?.keyFeatures.map(feature => <>
+                                    others?.keyFeatures.map(feature => <>
                                         <p>{feature.title}: {feature.details}</p>
                                     </>)
                                 }
-                                <p>Category: {motherboard?.category}</p>
+                                <p>Category: {others?.category}</p>
                                 <p className='font-bold'>Scroll down to see more <span className='text-green-600'>details</span></p>
                             </div>
                         </div>
@@ -46,7 +45,7 @@ const motherboardDetails = ({ motherboard }) => {
                 <div className='border p-5 rounded-md'>
                     <h3 className='text-xl font-bold'>Basic information</h3>
                     {
-                        motherboard?.spec?.map(info => <>
+                        others?.spec?.map(info => <>
                             <div className='flex justify-start'>
                                 <p>
                                     <span className='italic mr-[100px]'>{info.infoName}</span>
@@ -63,7 +62,7 @@ const motherboardDetails = ({ motherboard }) => {
                 <div className='p-5 flex justify-center items-center'>
                     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
                         {
-                            motherboard?.review?.map(info => <>
+                            others?.review?.map(info => <>
                                 <div className='border rounded-md w-[80%] p-5'>
                                     <p>Name: {info.name}</p>
                                     <p>Review: {info.review}</p>
@@ -77,9 +76,9 @@ const motherboardDetails = ({ motherboard }) => {
     );
 };
 
-export default motherboardDetails;
+export default othersDetails;
 
-motherboardDetails.getLayout = function getLayout(page) {
+othersDetails.getLayout = function getLayout(page) {
     return (
         <RootLayout>
             {page}
@@ -88,11 +87,11 @@ motherboardDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/motherboard')
+    const res = await fetch('http://localhost:5000/others')
     const data = await res.json()
 
     const paths = data.map((product) => ({
-        params: { motherboardId: product?._id }
+        params: { othersId: product._id }
     }))
 
     return { paths, fallback: false }
@@ -100,11 +99,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/motherboard/${params.motherboardId}`)
+    const res = await fetch(`http://localhost:5000/others/${params.othersId}`)
     const data = await res.json()
     return {
         props: {
-            motherboard: data
+            others: data
         }
     }
 }
