@@ -2,23 +2,25 @@ import RootLayout from '@/components/Layout/RootLayout';
 import { Button, Tooltip } from 'antd';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import toast, { Toaster } from 'react-hot-toast';
 
 const PCBuilderPage = () => {
+    const notify = () => toast.success('Build Successfully Created');
 
     const { products } = useSelector(state => state.pcBuilder)
-    console.log(products);
 
-    const cpuProduct = products.filter(product => product.category === 'CPU')[0];
+    const cpuProduct = products.filter(product => product.category === 'cpu')[0];
+    console.log(cpuProduct);
 
-    const motherboardProduct = products.filter(product => product.category === 'Motherboard')[0]
+    const motherboardProduct = products.filter(product => product.category === 'motherboard')[0]
 
-    const ramProduct = products.filter(product => product.category === 'Ram')[0]
+    const ramProduct = products.filter(product => product.category === 'ram')[0]
 
-    const powerSupplyProduct = products.filter(product => product.category === 'Power-Supply')[0]
+    const powerSupplyProduct = products.filter(product => product.category === 'power-supply')[0]
 
-    const storageProduct = products.filter(product => product.category === 'Storage')[0]
+    const storageProduct = products.filter(product => product.category === 'storage')[0]
 
-    const monitorProduct = products.filter(product => product.category === 'Monitor')[0]
+    const monitorProduct = products.filter(product => product.category === 'monitor')[0]
 
     return (
         <>
@@ -111,7 +113,10 @@ const PCBuilderPage = () => {
                 <div className='flex justify-center pb-12 mt-5'>
                     {
                         products.length >= 5 ?
-                            <Button onClick={() => alert('build completed')}>Complete Build</Button>
+                            <>
+                                <Button onClick={notify}>Complete Build</Button>
+                                <Toaster />
+                            </>
                             :
                             <Tooltip title="Select at least 5 product to complete the build">
                                 <Button type='primary' disabled>Complete Build</Button>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from 'antd';
 import Link from 'next/link';
 const FeaturedCard = ({ info }) => {
+    console.log(info);
     return (
         <Link href={`${info?.link}`}>
             <div className="flex justify-center items-center">

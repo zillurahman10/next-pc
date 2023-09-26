@@ -29,7 +29,7 @@ motherboard.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/motherboard")
+    const res = await fetch("https://next-pc-server.vercel.app/motherboard")
     const data = await res.json()
     return {
         props: {

@@ -88,7 +88,7 @@ motherboardDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/motherboard')
+    const res = await fetch('https://next-pc-server.vercel.app/motherboard')
     const data = await res.json()
 
     const paths = data.map((product) => ({
@@ -100,7 +100,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/motherboard/${params.motherboardId}`)
+    const res = await fetch(`https://next-pc-server.vercel.app/motherboard/${params.motherboardId}`)
     const data = await res.json()
     return {
         props: {

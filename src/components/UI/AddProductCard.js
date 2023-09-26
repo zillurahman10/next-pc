@@ -26,7 +26,7 @@ const AddProductCard = ({ product }) => {
                     <p>Category: {product?.category}</p>
                     <p>Price: {product?.price}</p>
                     <p>Status: {product?.status}</p>
-                    <p>Rating: {product?.rating}</p>
+                    <p>Rating: {product?.AvarageRating}</p>
                     <Button onClick={() => handleAddProduct()} className='w-full mt-3'>ADD</Button>
                 </div>
             </Card>

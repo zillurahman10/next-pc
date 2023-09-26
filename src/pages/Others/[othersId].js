@@ -87,7 +87,7 @@ othersDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/others')
+    const res = await fetch('https://next-pc-server.vercel.app/others')
     const data = await res.json()
 
     const paths = data.map((product) => ({
@@ -99,7 +99,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/others/${params.othersId}`)
+    const res = await fetch(`https://next-pc-server.vercel.app/others/${params.othersId}`)
     const data = await res.json()
     return {
         props: {

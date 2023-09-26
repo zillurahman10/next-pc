@@ -47,8 +47,8 @@ Home.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/components")
-  const featuredResult = await fetch("http://localhost:5000/featured")
+  const res = await fetch("https://next-pc-server.vercel.app/components")
+  const featuredResult = await fetch("https://next-pc-server.vercel.app/featured")
   const featured = await featuredResult.json()
   const data = await res.json()
   return {
@@ -61,185 +61,217 @@ export const getStaticProps = async () => {
 
 
 
-const cpu = [
-  {
-    img: 'https://www.startech.com.bd/image/cache/catalog/processor/Intel/i3-10100/i3-10100-500x500.jpg',
-    name: 'Intel 10th Gen Core i3 10100 Processor',
-    category: 'CPU/Processor',
-    status: 'In Stock',
-    price: '11,800৳',
-    spec: [
-      {
-        infoName: 'Base Frequency',
-        infoDetails: '3.60 GHz'
-      },
-      {
-        infoName: 'Maximum Turbo Frequency',
-        infoDetails: '4.30 GHz'
-      },
-      {
-        infoName: 'Cache',
-        infoDetails: '6 MB SmartCache'
-      },
-      {
-        infoName: 'Cores',
-        infoDetails: '4'
-      },
-      {
-        infoName: 'Threads',
-        infoDetails: '8'
-      },
-      {
-        infoName: 'Default TDP',
-        infoDetails: '65 W'
-      }
-    ],
-    keyFeatures: [
-      {
-        title: 'Brand',
-        details: 'Intel'
-      },
-      {
-        title: 'Model',
-        details: 'Intel Core i3 10100'
-      }
-    ],
-    individualRating: '4 out of 5',
-    AvarageRating: '3.5 out of 5',
-    review: [
-      {
-        name: 'John Smith',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Alex Kalvin',
-        review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Jonny English',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
-      },
-    ]
-  },
-  {
-    img: 'https://www.startech.com.bd/image/cache/catalog/processor/Intel/i3-10100/i3-10100-500x500.jpg',
-    name: 'Intel 10th Gen Core i3 10100 Processor',
-    category: 'CPU/Processor',
-    status: 'In Stock',
-    price: '11,800৳',
-    spec: [
-      {
-        infoName: 'Base Frequency',
-        infoDetails: '3.60 GHz'
-      },
-      {
-        infoName: 'Maximum Turbo Frequency',
-        infoDetails: '4.30 GHz'
-      },
-      {
-        infoName: 'Cache',
-        infoDetails: '6 MB SmartCache'
-      },
-      {
-        infoName: 'Cores',
-        infoDetails: '4'
-      },
-      {
-        infoName: 'Threads',
-        infoDetails: '8'
-      },
-      {
-        infoName: 'Default TDP',
-        infoDetails: '65 W'
-      }
-    ],
-    keyFeatures: [
-      {
-        title: 'Brand',
-        details: 'Intel'
-      },
-      {
-        title: 'Model',
-        details: 'Intel Core i3 10100'
-      }
-    ],
-    individualRating: '4 out of 5',
-    AvarageRating: '3.5 out of 5',
-    review: [
-      {
-        name: 'John Smith',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Alex Kalvin',
-        review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Jonny English',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
-      },
-    ]
-  },
-  {
-    img: 'https://www.startech.com.bd/image/cache/catalog/processor/Intel/i3-10100/i3-10100-500x500.jpg',
-    name: 'Intel 10th Gen Core i3 10100 Processor',
-    category: 'CPU/Processor',
-    status: 'In Stock',
-    price: '11,800৳',
-    spec: [
-      {
-        infoName: 'Base Frequency',
-        infoDetails: '3.60 GHz'
-      },
-      {
-        infoName: 'Maximum Turbo Frequency',
-        infoDetails: '4.30 GHz'
-      },
-      {
-        infoName: 'Cache',
-        infoDetails: '6 MB SmartCache'
-      },
-      {
-        infoName: 'Cores',
-        infoDetails: '4'
-      },
-      {
-        infoName: 'Threads',
-        infoDetails: '8'
-      },
-      {
-        infoName: 'Default TDP',
-        infoDetails: '65 W'
-      }
-    ],
-    keyFeatures: [
-      {
-        title: 'Brand',
-        details: 'Intel'
-      },
-      {
-        title: 'Model',
-        details: 'Intel Core i3 10100'
-      }
-    ],
-    individualRating: '4 out of 5',
-    AvarageRating: '3.5 out of 5',
-    review: [
-      {
-        name: 'John Smith',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Alex Kalvin',
-        review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
-      },
-      {
-        name: 'Jonny English',
-        review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
-      },
-    ]
-  },
-]
+// const cpu = [
+//   {
+//     img: 'https://www.startech.com.bd/image/cache/catalog/processor/Intel/i3-10100/i3-10100-500x500.jpg',
+//     name: 'Intel 10th Gen Core i3 10100 Processor',
+//     category: 'CPU/Processor',
+//     status: 'In Stock',
+//     price: '11,800৳',
+//     spec: [
+//       {
+//         infoName: 'Base Frequency',
+//         infoDetails: '3.60 GHz'
+//       },
+//       {
+//         infoName: 'Maximum Turbo Frequency',
+//         infoDetails: '4.30 GHz'
+//       },
+//       {
+//         infoName: 'Cache',
+//         infoDetails: '6 MB SmartCache'
+//       },
+//       {
+//         infoName: 'Cores',
+//         infoDetails: '4'
+//       },
+//       {
+//         infoName: 'Threads',
+//         infoDetails: '8'
+//       },
+//       {
+//         infoName: 'Default TDP',
+//         infoDetails: '65 W'
+//       }
+//     ],
+//     keyFeatures: [
+//       {
+//         title: 'Brand',
+//         details: 'Intel'
+//       },
+//       {
+//         title: 'Model',
+//         details: 'Intel Core i3 10100'
+//       }
+//     ],
+//     individualRating: '4 out of 5',
+//     AvarageRating: '3.5 out of 5',
+//     review: [
+//       {
+//         name: 'John Smith',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Alex Kalvin',
+//         review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Jonny English',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
+//       },
+//     ]
+//   },
+//   {
+//     img: 'https://www.startech.com.bd/image/cache/catalog/processor/amd/5600x/5600x-001-500x500.jpg',
+//     name: 'AMD Ryzen 5 5600 Processor',
+//     category: 'CPU/Processor',
+//     status: 'In Stock',
+//     price: '14,300৳',
+//     spec: [
+//       {
+//         infoName: 'Base Frequency',
+//         infoDetails: '3.5GHz'
+//       },
+//       {
+//         infoName: 'Maximum Turbo Frequency',
+//         infoDetails: 'Up to 4.4GHz'
+//       },
+//       {
+//         infoName: 'Cache',
+//         infoDetails: 'Total L1 Cache: 384KB Total L2 Cache: 3MB Total L3 Cache: 32MB'
+//       },
+//       {
+//         infoName: 'Cores',
+//         infoDetails: '6'
+//       },
+//       {
+//         infoName: 'Threads',
+//         infoDetails: '12'
+//       },
+//       {
+//         infoName: 'Default TDP',
+//         infoDetails: '65W'
+//       },
+//       {
+//         infoName: 'cTDP',
+//         infoDetails: '65W'
+//       },
+//       {
+//         infoName: 'Supported Technologies',
+//         infoDetails: 'AMD "Zen 3" Core Architecture AMD StoreMI Technology AMD Ryzen Master Utility AMD Ryzen VR-Ready Premium'
+//       }
+//     ],
+//     keyFeatures: [
+//       {
+//         title: 'Brand',
+//         details: 'AMD'
+//       },
+//       {
+//         title: 'Model',
+//         details: 'Ryzen 5 5600'
+//       },
+//       {
+//         title: 'Speed',
+//         details: '3.5GHz up to 4.4GHz'
+//       },
+//       {
+//         title: 'Cache: L2',
+//         details: '3MB, L3: 32MB; Cores-6 & Threads-12'
+//       },
+//       {
+//         title: 'Memory Speed',
+//         details: 'DDR4 Up to 3200MHz'
+//       },
+//     ],
+//     individualRating: '4 out of 5',
+//     AvarageRating: '3.5 out of 5',
+//     review: [
+//       {
+//         name: 'John Smith',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Alex Kalvin',
+//         review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Jonny English',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
+//       },
+//     ]
+//   },
+//   {
+//     img: 'https://www.startech.com.bd/image/cache/catalog/processor/Intel/Intel%20Core%20i5-7640X%20X-series/Intel%20Core%20i5-7640X%20X-series-500x500.jpg',
+//     name: 'Intel Core i5-7640X X-series Kaby Lake Processor',
+//     category: 'CPU/Processor',
+//     status: 'In Stock',
+//     price: '25,500৳',
+//     spec: [
+//       {
+//         infoName: 'Processor Type',
+//         infoDetails: 'Intel® Core™ X-series Processors (6 MB Cache, 4.00 GHz Max Turbo Frequency 4.20 GHz)'
+//       },
+//       {
+//         infoName: 'Processor Speed',
+//         infoDetails: '4.00 GHz Max Turbo Frequency 4.20 GHz'
+//       },
+//       {
+//         infoName: 'Number Of Cores',
+//         infoDetails: '4'
+//       },
+//       {
+//         infoName: 'Number Of Threads',
+//         infoDetails: '4'
+//       },
+//       {
+//         infoName: 'Processor Cache',
+//         infoDetails: '6 MB Cache'
+//       }
+//     ],
+//     keyFeatures: [
+//       {
+//         title: 'Brand',
+//         details: 'Intel'
+//       },
+//       {
+//         title: 'Model',
+//         details: 'Core i5-7640X X-series'
+//       },
+//       {
+//         title: 'Speed',
+//         details: '4.00 GHz To 4.20 GHz'
+//       },
+//       {
+//         title: 'Cores',
+//         details: '4'
+//       },
+//       {
+//         title: 'Threads',
+//         details: '4'
+//       },
+//       {
+//         title: 'Cache',
+//         details: '6 MB'
+//       },
+//     ],
+//     individualRating: '4 out of 5',
+//     AvarageRating: '3.5 out of 5',
+//     review: [
+//       {
+//         name: 'John Smith',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Alex Kalvin',
+//         review: 'I cannot believe my eyes how outstanding perfomance it gives me. Just love it.'
+//       },
+//       {
+//         name: 'Jonny English',
+//         review: 'This product is just wow. I cannot believe my eyes how outstanding perfomance it gives me.'
+//       },
+//     ]
+//   },
+// ]
 
 // const motherboard = [
 //   {
@@ -255,8 +287,8 @@ const cpu = [
 //               infoDetails: 'Support for Intel® Core™ i7 processors/Intel® Core™ i5 processors/Intel® Core™ i3 processors/Intel® Pentium® processors/Intel® Celeron® processors in the LGA1150 package L3 cache varies with CPU'
 //           },
 //           {
-//               infoName: 'Chipset',
 //               infoDetails: 'Intel® H81 Express'
+//               infoName: 'Chipset',
 //           },
 //           {
 //               infoName: 'BIOS',

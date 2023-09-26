@@ -7,10 +7,12 @@ const monitor = ({ components }) => {
     return (
         <>
             <h1 className='text-2xl text-center m-12'>Visit the top monitor</h1>
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 m-12'>
-                {
-                    monitor.map(product => <AddProductCard key={product?.id} product={product}></AddProductCard>)
-                }
+            <div className='flex justify-center items-center'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                    {
+                        monitor.map(product => <AddProductCard key={product?.id} product={product}></AddProductCard>)
+                    }
+                </div>
             </div>
         </>
     );
@@ -27,7 +29,7 @@ monitor.getLayout = function getLayout(page) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:5000/monitor")
+    const res = await fetch("https://next-pc-server.vercel.app/monitor")
     const data = await res.json()
     return {
         props: {

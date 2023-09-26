@@ -87,7 +87,7 @@ ramDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/ram')
+    const res = await fetch('https://next-pc-server.vercel.app/ram')
     const data = await res.json()
 
     const paths = data.map((product) => ({
@@ -99,7 +99,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/ram/${params.ramId}`)
+    const res = await fetch(`https://next-pc-server.vercel.app/ram/${params.ramId}`)
     const data = await res.json()
     return {
         props: {

@@ -47,7 +47,7 @@ const cpuDetails = ({ cpu }) => {
                 <div className='border p-5 rounded-md'>
                     <h3 className='text-xl font-bold'>Basic information</h3>
                     {
-                        cpu?.spec?.basicInfo?.map(info => <>
+                        cpu?.spec?.map(info => <>
                             <div className='flex justify-start'>
                                 <p>
                                     <span className='italic mr-[100px]'>{info.infoName}</span>
@@ -89,7 +89,7 @@ cpuDetails.getLayout = function getLayout(page) {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:5000/cpu')
+    const res = await fetch('https://next-pc-server.vercel.app/cpu')
     const data = await res.json()
     console.log(data);
 
@@ -102,7 +102,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { params } = context
-    const res = await fetch(`http://localhost:5000/cpu/${params.cpuId}`)
+    const res = await fetch(`https://next-pc-server.vercel.app/cpu/${params.cpuId}`)
     const data = await res.json()
     return {
         props: {
